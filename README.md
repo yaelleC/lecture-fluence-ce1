@@ -8,7 +8,7 @@ Un livret imprimable, en français, pour aider les enfants de CE1 (7–8 ans) à
 
 ## Télécharger le livret
 
-➡️ **[Télécharger le PDF](livret_lecture_CE1_v2.pdf)**
+➡️ **[Télécharger le PDF](../../releases/latest/download/livret_lecture_CE1_v2.pdf)**
 (format A4, prêt à imprimer)
 
 ---
