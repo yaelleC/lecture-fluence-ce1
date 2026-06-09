@@ -79,7 +79,11 @@
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
 \tolerance=9999
-\AtBeginDocument{\raggedright}
+% Soft ragged-right: lines fill the column but may stop up to 2em short of the
+% margin. Plain \raggedright (infinite stretch) made lines break far too early
+% in the narrow column beside a wrapfig image (short, one-word first lines).
+% Word-splitting stays OFF via the hyphenpenalties above, not via the margin.
+\AtBeginDocument{\rightskip=0pt plus 2em\relax\parindent=0pt}
 
 \definecolor{accentcolor}{RGB}{40, 80, 140}
 
