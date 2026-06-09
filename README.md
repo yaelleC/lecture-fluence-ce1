@@ -77,6 +77,16 @@ Pour reconstruire le PDF après avoir modifié le texte :
 
 ---
 
+### Conseils typographiques pour les enfants en difficulté de lecture
+
+- Police lisible : **OpenDyslexic**, **Lexend**, **Andika**, ou à défaut Verdana, Comic Sans MS.
+- Taille : 14 à 16 points pour le corps de texte.
+- Interligne : 1,5.
+- Texte aligné à gauche (jamais justifié).
+- Marges généreuses sur les côtés.
+
+---
+
 ## Licence
 
 Ce livret est distribué sous licence **[Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)**.
