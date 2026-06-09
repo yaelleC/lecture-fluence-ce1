@@ -51,7 +51,7 @@ Pour les **parents**, **enseignant·e·s**, **orthophonistes** et toute personne
 
 Si ce livret a aidé un enfant, j'aimerais beaucoup le savoir !
 
-➡️ **[Laisser un message](https://TON-LIEN-LANDING-PAGE.example.com)** *(à mettre à jour)*
+➡️ **[Laisser un message](https://forms.gle/XMzsfRFwtjkXsNPV8)** 
 
 Tu peux aussi ouvrir une *issue* directement ici sur GitHub.
 
@@ -59,26 +59,21 @@ Tu peux aussi ouvrir une *issue* directement ici sur GitHub.
 
 ## Construire le PDF depuis les sources
 
-Si tu veux **adapter le livret** (changer le prénom, le ton, ajouter un texte…), les sources sont dans ce dépôt. Le livret final est **« Une année avec Mango »** (fichiers `…_v2`) :
+Si tu veux **adapter le livret** (changer le prénom, le ton, ajouter un texte…), tout est dans **le fichier `tex` source** 
 
-- `livret_lecture_CE1_v2.md` — le texte, en Markdown (**c'est ici qu'on édite l'histoire**)
-- `header.tex` — préambule LaTeX (police, espacements, commandes)
-- `fix_v2_tex.py` — place les images du dossier `img/` dans chaque chapitre
-- `fit_pages.py` — ajuste la taille de police chapitre par chapitre pour que **chaque chapitre tienne sur exactement une page**
-- `regen_tex_v2.sh` — régénère le `.tex` depuis le Markdown (pandoc + les deux scripts ci-dessus)
-- `compile_v2.sh` — compile le `.tex` en PDF
+- `livret_lecture_CE1_v2.tex` — **la source** : le texte, la mise en page et les images, tout s'édite ici
+- `compile_v2.sh` — compile le `.tex` en PDF (et l'ouvre)
 - `img/` — images des textes
 
-> Une version antérieure (`livret_lecture_CE1.*`, `compile.sh`) est conservée dans le dépôt pour référence.
+> Une version antérieure (`livret_lecture_CE1.*`, `compile.sh`) est conservée dans le dépôt pour référence. Il s'agit d'un livret avec 16 textes indépendants au lieu d'un seule histoire à 16 chapitres.
 
-Pour reconstruire le PDF après avoir modifié l'histoire :
+Pour reconstruire le PDF après avoir modifié le texte :
 
 ```bash
-./regen_tex_v2.sh   # Markdown → LaTeX
 ./compile_v2.sh     # LaTeX → PDF
 ```
 
-(Nécessite **pandoc**, et **BasicTeX** ou **MacTeX** avec les paquets `wrapfig`, `tabularx`. Voir les scripts pour les détails. Pour changer la taille de police d'un chapitre, édite le dictionnaire `CHAPTER_FONTSIZE` dans `fit_pages.py`.)
+(Nécessite **BasicTeX** ou **MacTeX** avec les paquets `wrapfig`, `tabularx`. Pour qu'un chapitre tienne sur exactement une page, ajuste la taille dans son `\storyfont{...}` au début du chapitre — par exemple `\storyfont{12}`.)
 
 ---
 
@@ -100,7 +95,7 @@ Tu peux librement :
 
 ## Autrices
 
-Yaëlle Chaudy
+Yaëlle et Camille Chaudy
 
 ---
 

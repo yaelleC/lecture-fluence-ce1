@@ -7,12 +7,12 @@
 #  Ce script compile livret_lecture_CE1_v2.tex  →  livret_lecture_CE1_v2.pdf,
 #  puis l'ouvre.
 #
-#  IMPORTANT : ce script NE touche PAS au fichier .tex. Tu peux donc modifier
-#  livret_lecture_CE1_v2.tex à la main (mise en page, images, etc.) et relancer
-#  ./compile_v2.sh autant de fois que tu veux : tes modifications sont gardées.
+#  La SOURCE du livret, c'est livret_lecture_CE1_v2.tex : on l'édite à la main
+#  (texte, mise en page, images), puis on relance ./compile_v2.sh. Il n'y a pas
+#  d'autre fichier à régénérer — tout est dans le .tex.
 #
-#  (Pour repartir du texte Markdown — et donc ÉCRASER le .tex — utilise plutôt
-#   ./regen_tex_v2.sh, qui fait d'abord une sauvegarde du .tex.)
+#  Astuce : pour qu'un chapitre tienne sur une page, ajuste la taille dans son
+#  \storyfont{...} (au début du chapitre, ex. \storyfont{12}).
 #
 #  Pré-requis : BasicTeX (xelatex).
 # =============================================================================
@@ -31,7 +31,6 @@ fi
 
 if [ ! -f livret_lecture_CE1_v2.tex ]; then
   echo "❌  livret_lecture_CE1_v2.tex est introuvable."
-  echo "    → génère-le d'abord depuis le texte avec : ./regen_tex_v2.sh"
   exit 1
 fi
 
