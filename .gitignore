@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Backups created by regen_tex_v2.sh / editors
+*.SAUVE-*
+*.bak
+*.bak-*
+
+# Claude Code local settings
+.claude/settings.local.json

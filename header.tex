@@ -1,0 +1,35 @@
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\setlength{\parskip}{1.2em}
+
+% Child-friendly line breaking: left-aligned (never justified) so that words
+% are NEVER split across two lines with a hyphen — easier for a young reader.
+% Done with built-in primitives (no extra package needed).
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=9999
+\AtBeginDocument{\raggedright}
+
+\definecolor{accentcolor}{RGB}{40, 80, 140}
+
+% Big, decorated divider title for the 4 section opener pages.
+% Usage: \sectiondivider{1}{Textes courts}
+\newcommand{\sectiondivider}[2]{%
+  \vspace*{2cm}%
+  \begin{center}
+    {\fontsize{18pt}{22pt}\selectfont\textcolor{accentcolor}{\MakeUppercase{Section #1}}}\\[0.6em]
+    \textcolor{accentcolor}{\rule{0.35\textwidth}{1.5pt}}\\[1em]
+    {\fontsize{38pt}{44pt}\selectfont\bfseries #2}
+  \end{center}
+  \vspace{1.5cm}
+}
+
+% Per-chapter body font, used by fit_pages.py to fit each chapter on exactly
+% one page. Usage (wrapped around a whole chapter): {\storyfont{12} ... }
+% baseline = 1.2 x size, parskip scaled down to save vertical space.
+\newcommand{\storyfont}[1]{%
+  \setlength{\parskip}{0.6em}%
+  \fontsize{#1pt}{\dimexpr #1pt*6/5\relax}\selectfont%
+}

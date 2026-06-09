@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merci de m'avoir lue — Livret de Lecture CE1</title>
+<meta name="description" content="Livret de lecture gratuit pour aider les enfants de CE1 à progresser en fluence de lecture.">
+<style>
+  :root {
+    --accent: #285090;
+    --accent-light: #e8eff8;
+    --text: #2c3e50;
+    --muted: #6b7c8c;
+    --bg: #fafaf7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Verdana', 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+  h1 {
+    color: var(--accent);
+    font-size: 2.4em;
+    margin: 0.5em 0 0.2em;
+    line-height: 1.15;
+  }
+  h2 {
+    color: var(--accent);
+    font-size: 1.25em;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  .tagline {
+    font-size: 1.1em;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 2em;
+  }
+  .quote {
+    border-left: 4px solid var(--accent);
+    background: var(--accent-light);
+    padding: 1em 1.2em;
+    margin: 2em 0;
+    color: #334;
+    border-radius: 0 6px 6px 0;
+  }
+  form {
+    background: white;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(40, 80, 144, 0.08);
+    margin-top: 1em;
+  }
+  label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    color: var(--text);
+  }
+  input[type="text"], select, textarea {
+    width: 100%;
+    padding: 0.7em;
+    border: 1px solid #d0d6dc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+    background: #fdfdfb;
+  }
+  input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    background: white;
+  }
+  textarea {
+    min-height: 110px;
+    resize: vertical;
+  }
+  button {
+    background: var(--accent);
+    color: white;
+    padding: 0.85em 1.6em;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5em;
+    transition: background 0.15s;
+  }
+  button:hover { background: #1a3a6e; }
+  .download {
+    display: inline-block;
+    background: white;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+  .download:hover { background: var(--accent-light); }
+  footer {
+    margin-top: 4em;
+    padding-top: 1.5em;
+    border-top: 1px solid #e0e4e8;
+    font-size: 0.85em;
+    color: var(--muted);
+    text-align: center;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>Merci de m'avoir lue&nbsp;!</h1>
+<p class="tagline">Tu viens de finir un texte du Livret de Lecture CE1&nbsp;? Bravo&nbsp;!</p>
+
+<div class="quote">
+  Ce livret a été écrit pour ma fille, qui avait du mal à lire à la vitesse de son âge.
+  Il est offert <strong>gratuitement</strong> à toutes les familles, enseignant·e·s et orthophonistes qui pensent qu'il peut aider.
+</div>
+
+<h2>Tu veux laisser un message&nbsp;?</h2>
+<p>Cela me ferait très plaisir. Tout est optionnel.</p>
+
+<!-- Branchez le `action` ci-dessous sur le service de votre choix : Formspree, Tally, Netlify Forms, etc. -->
+<form action="https://formspree.io/f/REMPLACER_PAR_VOTRE_ID" method="POST">
+
+  <label for="qui">Tu es…</label>
+  <select name="qui" id="qui">
+    <option value="">— Choisis (optionnel) —</option>
+    <option>Un parent</option>
+    <option>Un·e enseignant·e</option>
+    <option>Un·e orthophoniste</option>
+    <option>Un enfant</option>
+    <option>Autre</option>
+  </select>
+
+  <label for="lieu">D'où viens-tu&nbsp;?</label>
+  <input type="text" name="lieu" id="lieu" placeholder="Pays, ville, région… (optionnel)">
+
+  <label for="message">Ton message</label>
+  <textarea name="message" id="message" placeholder="Ce que tu as aimé, ce qui pourrait être mieux, comment ça s'est passé avec ton enfant…" required></textarea>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+<h2>Pas encore le livret&nbsp;?</h2>
+<p>Le PDF est gratuit et libre à imprimer.</p>
+<a class="download" href="https://github.com/REMPLACER_USER/REMPLACER_REPO/releases/latest">📥 Télécharger sur GitHub</a>
+
+<footer>
+  Livret de Lecture — Fluence CE1<br>
+  Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a> · sans cookies, sans publicité, sans traçage
+</footer>
+
+</body>
+</html>
